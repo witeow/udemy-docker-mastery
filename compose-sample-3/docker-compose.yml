@@ -10,6 +10,8 @@ services:
     build:
       context: .
       dockerfile: nginx.Dockerfile
+    image: nginx-custom # building image with this name, following the docker file specified, with the relevant conf settings
+    # without the image conf, the name of the image created will use the folder name to prevent naming conflicts
     ports:
       - '80:80'
   web:
